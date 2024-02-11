@@ -1,7 +1,8 @@
 FROM ubuntu:22.04
 
-RUN apt-get update -y && apt-get upgrade -y
-RUN apt-get install -y gradle maven git libpcap-dev
+RUN apt update -y
+RUN apt upgrade -y
+RUN apt install -y gradle maven git libpcap-dev
 
 RUN git clone https://github.com/ahlashkari/CICFlowMeter /code
 RUN cd /code/jnetpcap/linux/jnetpcap-1.4.r1425 && \
